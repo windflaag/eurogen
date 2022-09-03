@@ -1,0 +1,100 @@
+{
+    "language": {
+        "name": "italian",
+        "codec": "it_IT"
+    },
+    "education": [
+        {
+            "start": "2020",
+            "end": "present",
+            "title": "Corso di Laurea Triennale",
+            "fields": [
+                "Università degli Studi Milano Bicocca, Milano, Italia",
+                "Corso di laurea: Informatica [E3101Q]",
+                "Sito: unimib.it",
+                "Anno: 3°"
+            ]
+        },
+        {
+            "start": "2015",
+            "end": "2020",
+            "title": "Diploma di Liceo Scientifico",
+            "fields": [
+                "Istituto di Istruzione Superiore Enrico Mattei, Fiorenzuola d’Arda, Ita",
+                "Sito: www.istitutomatteifiorenzuola.edu.it",
+                "Voto: 75 / 100"
+            ]
+        }
+    ],
+    "bibliography": {
+        "name": "Francesco",
+        "surname": "Refolli",
+        "abbrv": "R.",
+        "address": "Fiorenzuola d'Arda, Piacenza, IT",
+        "mobile": "+39 392 757 8861",
+        "email": "francesco.refolli@gmail.com",
+        "git": "windflaag",
+        "linkedin": "francesco-refolli-ba630b186",
+        "gender": "Male",
+        "nationality": "Italian",
+        "birthday": "17 July 2001"
+    },
+    "skills": {
+        "language": {
+            "mothertongue": "Italiano",
+            "langs": [
+                {
+                    "name": "Inglese",
+                    "levels": ["B2", "B2", "B2", "B2", "B2"],
+                    "certificate": {
+                        "issuer": "Bbetween Foreign Languages - English B",
+                        "url":"https://bestr.it/verify/DN0EAJ2GH7"
+                    }
+                }
+            ]
+        },
+
+        "digital": {
+            "levels": [
+                "Proficient",
+                "Proficient",
+                "Proficient",
+                "Proficient",
+                "Proficient"
+            ]
+        },
+
+        "programming": {
+            "langs": [
+                "C",
+                "C++",
+                "Java",
+                "Python",
+                "Lisp",
+                "Prolog",
+                "R"
+            ]
+        },
+
+        "patents": [
+            {
+                "title": "Patente tipo B",
+                "start": "21/01/2020",
+                "end": "17/07/2030",
+                "issuer": "Dipartimento dei Trasporti Terrestri"
+            }
+        ],
+
+        "certificates": [
+            {
+                "title": "MOS -- Microsoft Excel 2010",
+                "name": "Exam 77--882 MOS",
+                "number": "34624028",
+                "score": "875"
+            }
+        ]
+    },
+    "dream": {
+        "text": "Nel breve termine miro a terminare gli studi. Una volta ottenuta la laurea triennale procederò con il biennio magistrale. Dopo l’università aspiro a lavorare come programmatore in ambito software di sistema, crittografia o affidabilità dei sistemi informatici"
+    }
+}
