@@ -137,12 +137,15 @@ class CVEducationExperience:
         self.end = config["end"]
         self.title = config["title"]
         self.fields = config["fields"]
+        self.urls = config["urls"]
     
     def compile(self):
         return "\n".join([
             "\\ecvtitle{" + self.start + "--" + self.end + "}{" + self.title + "}"
         ] + [
             "\\ecvitem{}{" + field + "}" for field in self.fields
+        ] + [
+            "\\ecvitem{}{\\href{" + self.urls[url].replace("_", "\\_") + "}{Vai a " + url + "}}" for url in self.urls
         ])
 
 class CVLanguageSkill:

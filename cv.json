@@ -11,9 +11,23 @@
             "fields": [
                 "Università degli Studi Milano Bicocca, Milano, Italia",
                 "Corso di laurea: Informatica [E3101Q]",
-                "Sito: unimib.it",
                 "Anno: 3°"
-            ]
+            ],
+            "urls": {
+                "Sito": "unimib.it"
+            }
+        },
+        {
+            "start": "2021",
+            "end": "2021",
+            "title": "Progetto Cyberchallenge",
+            "fields": [
+                "Università degli Studi Milano Bicocca, Milano, Italia"
+            ],
+            "urls": {
+                "Sito": "https://cyberchallenge.it/about",
+                "Certificato": "https://github.com/windflaag/certificates/blob/master/CCIT_2021_Attestato_partecipazione.pdf"
+            }
         },
         {
             "start": "2015",
@@ -21,9 +35,11 @@
             "title": "Diploma di Liceo Scientifico",
             "fields": [
                 "Istituto di Istruzione Superiore Enrico Mattei, Fiorenzuola d’Arda, Ita",
-                "Sito: www.istitutomatteifiorenzuola.edu.it",
                 "Voto: 75 / 100"
-            ]
+            ],
+            "urls": {
+                "Sito": "www.istitutomatteifiorenzuola.edu.it"
+            }
         }
     ],
     "bibliography": {
