@@ -15,7 +15,8 @@
             ],
             "urls": {
                 "Sito": "unimib.it"
-            }
+            },
+            "attachments": {}
         },
         {
             "start": "2021",
@@ -25,8 +26,10 @@
                 "Università degli Studi Milano Bicocca, Milano, Italia"
             ],
             "urls": {
-                "Sito": "https://cyberchallenge.it/about",
-                "Certificato": "https://github.com/windflaag/certificates/blob/master/CCIT_2021_Attestato_partecipazione.pdf"
+                "Sito": "https://cyberchallenge.it/about"
+            },
+            "attachments": {
+                "Certificato": "https://raw.githubusercontent.com/windflaag/certificates/master/CCIT_2021_Attestato_partecipazione.pdf"
             }
         },
         {
@@ -39,7 +42,8 @@
             ],
             "urls": {
                 "Sito": "www.istitutomatteifiorenzuola.edu.it"
-            }
+            },
+            "attachments": {}
         }
     ],
     "bibliography": {

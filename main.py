@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
-import os, json
+import os, json, argparse
+
+class Curler:
+    @staticmethod
+    def curlFile(url):
+        filename = "./build/" + url.split("/")[-1]
+        os.system(f"curl -o {filename} {url}")
+        return filename
 
 class Console:
     @staticmethod
@@ -138,6 +145,7 @@ class CVEducationExperience:
         self.title = config["title"]
         self.fields = config["fields"]
         self.urls = config["urls"]
+        self.attachments = config["attachments"]
     
     def compile(self):
         return "\n".join([
@@ -145,7 +153,11 @@ class CVEducationExperience:
         ] + [
             "\\ecvitem{}{" + field + "}" for field in self.fields
         ] + [
-            "\\ecvitem{}{\\href{" + self.urls[url].replace("_", "\\_") + "}{Vai a " + url + "}}" for url in self.urls
+            "\\ecvitem{}{\\href{" + self.urls[url].replace("_", "\\_") + "}{Vai a " + url + ": " + self.urls[url].replace('_', '\\_') + "}}" for url in self.urls
+        ] + [
+            "\\ecvitem{}{" + f"Allegato: {attachment}" + "}" for attachment in self.attachments
+        ] + [
+            "\\ecvitem{}{\\includegraphics[width=12cm]{" + Curler.curlFile(self.attachments[attachment]).replace('_', '\\_') + "}}" for attachment in self.attachments
         ])
 
 class CVLanguageSkill:
