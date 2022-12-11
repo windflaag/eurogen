@@ -92,7 +92,8 @@
                 "Python",
                 "Lisp",
                 "Prolog",
-                "R"
+                "R",
+                "Haskell"
             ]
         },
 
