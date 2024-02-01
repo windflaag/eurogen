@@ -138,6 +138,28 @@ class CVPageBreak:
     def compile(self):
         return "\\pagebreak"
 
+class CVWorkExperience:
+    def __init__(self, config):
+        self.start = config["start"]
+        self.end = config["end"]
+        self.title = config["title"]
+        self.fields = config["fields"]
+        self.urls = config["urls"]
+        self.attachments = config["attachments"]
+    
+    def compile(self):
+        return "\n".join([
+            "\\ecvtitle{" + self.start + "--" + self.end + "}{" + self.title + "}"
+        ] + [
+            "\\ecvitem{}{" + field + "}" for field in self.fields
+        ] + [
+            "\\ecvitem{}{\\href{" + self.urls[url].replace("_", "\\_") + "}{Vai a " + url + ": " + self.urls[url].replace('_', '\\_') + "}}" for url in self.urls
+        ] + [
+            "\\ecvitem{}{" + f"Allegato: {attachment}" + "}" for attachment in self.attachments
+        ] + [
+            "\\ecvitem{}{\\includegraphics[width=12cm]{" + Curler.curlFile(self.attachments[attachment]).replace('_', '\\_') + "}}" for attachment in self.attachments
+        ])
+
 class CVEducationExperience:
     def __init__(self, config):
         self.start = config["start"]
@@ -273,6 +295,15 @@ class CVSkills:
         
         return text
 
+class CVWork:
+    def __init__(self, config):
+        self.experiences = [CVWorkExperience(_) for _ in config]
+    
+    def compile(self):
+        text = "\\ecvsection{Esperienze Lavorative}"
+        text += "\n" + "\n".join([_.compile() for _ in self.experiences])
+        return text
+
 class CVEducation:
     def __init__(self, config):
         self.experiences = [CVEducationExperience(_) for _ in config]
@@ -311,6 +342,7 @@ class CVDocument:
 
         self.page = [
             CVPersonalInfo(),
+            CVWork(config["work"]),
             CVEducation(config["education"]),
             CVPageBreak(),
             CVSkills(config["skills"]),

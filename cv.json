@@ -3,17 +3,51 @@
         "name": "italian",
         "codec": "it_IT"
     },
+    "work": [
+        {
+            "start": "Sep 2023",
+            "end": "Dec 2023",
+            "title": "Tecnico Analista Programmatore",
+            "fields": [
+                "Binary System SRL, Piacenza, Italia",
+                "Rifacimento di interfacce web, di sync per importazione dati e del sistema di calcolo delle scadenze.",
+                "Tecnologie: Ruby on Rails, VueJS, Python"
+            ],
+            "urls": {
+                "Sito": "www.binarysystem.eu"
+            },
+            "attachments": {}
+        }
+    ],
     "education": [
         {
-            "start": "2020",
+            "start": "2023",
             "end": "present",
             "title": "Corso di Laurea Triennale",
             "fields": [
                 "Università degli Studi Milano Bicocca, Milano, Italia",
-                "Corso di laurea: Informatica [E3101Q]",
-                "Anno: 3°"
+                "Corso di laurea: Informatica [F1801Q]",
+                "Discipline affrontate: Ingegneria del Software, Machine Learning",
+                "Anno: 1°"
             ],
             "urls": {
+                "Sito": "unimib.it"
+            },
+            "attachments": {}
+        },
+        {
+            "start": "2020",
+            "end": "2023",
+            "title": "Corso di Laurea Triennale",
+            "fields": [
+                "Università degli Studi Milano Bicocca, Milano, Italia",
+                "Corso di laurea: Informatica [E3101Q]",
+                "Discipline affrontate: Linguaggi di Programmazione, Reti e Sistemi Operativi, Sistemi Distribuiti, Basi di Dati, Bioinformatica, Ingegneria del Software, Statistica",
+                "Voto: 107",
+                "Tesi: Un framework multi-linguaggio per l'identificazione delle dipendenze del codice sorgente"
+            ],
+            "urls": {
+                "Tesi": "https://github.com/frefolli/skullian-thesis",
                 "Sito": "unimib.it"
             },
             "attachments": {}
@@ -49,7 +83,7 @@
     "bibliography": {
         "name": "Francesco",
         "surname": "Refolli",
-        "abbrv": "R.",
+        "abbrv": "R.F.",
         "address": "Fiorenzuola d'Arda, Piacenza, IT",
         "mobile": "+39 392 757 8861",
         "email": "francesco.refolli@gmail.com",
@@ -90,10 +124,10 @@
                 "C++",
                 "Java",
                 "Python",
-                "Lisp",
-                "Prolog",
+                "Rust",
                 "R",
-                "Haskell"
+                "Lisp",
+                "Prolog"
             ]
         },
 
@@ -116,6 +150,6 @@
         ]
     },
     "dream": {
-        "text": "Nel breve termine miro a terminare gli studi. Una volta ottenuta la laurea triennale procederò con il biennio magistrale. Dopo l’università aspiro a lavorare come programmatore in ambito software di sistema, crittografia o affidabilità dei sistemi informatici"
+        "text": "Nel breve termine miro a terminare gli studi. Successivamente intendo perseguire una carriera professionale nell'ambito ferroviario (come macchinista o come programmatore) e nei settori per me di maggior interesse, concentrandomi specificamente su tematiche come il software di sistema, i sistemi distribuiti e i linguaggi di programmazione (compilatori et al)."
     }
 }
