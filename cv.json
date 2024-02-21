@@ -23,7 +23,7 @@
         {
             "start": "2023",
             "end": "present",
-            "title": "Corso di Laurea Triennale",
+            "title": "Corso di Laurea Magistrale",
             "fields": [
                 "Università degli Studi Milano Bicocca, Milano, Italia",
                 "Corso di laurea: Informatica [F1801Q]",
@@ -101,7 +101,7 @@
                     "name": "Inglese",
                     "levels": ["B2", "B2", "B2", "B2", "B2"],
                     "certificate": {
-                        "issuer": "Bbetween Foreign Languages - English B",
+                        "issuer": "Bbetween Foreign Languages - English B2",
                         "url":"https://bestr.it/verify/DN0EAJ2GH7"
                     }
                 }
@@ -122,9 +122,11 @@
             "langs": [
                 "C",
                 "C++",
-                "Java",
-                "Python",
                 "Rust",
+                "Python",
+                "Ruby",
+                "JS",
+                "Java",
                 "R",
                 "Lisp",
                 "Prolog"
@@ -150,6 +152,6 @@
         ]
     },
     "dream": {
-        "text": "Nel breve termine miro a terminare gli studi. Successivamente intendo perseguire una carriera professionale nell'ambito ferroviario (come macchinista o come programmatore) e nei settori per me di maggior interesse, concentrandomi specificamente su tematiche come il software di sistema, i sistemi distribuiti e i linguaggi di programmazione (compilatori et al)."
+        "text": "Nel breve termine miro a terminare gli studi. Successivamente intendo perseguire una carriera professionale nell'ambito ferroviario e nei settori per me di maggior interesse, concentrandomi specificamente su tematiche come il software di sistema, i sistemi distribuiti e i linguaggi di programmazione (compilatori et al)."
     }
 }
