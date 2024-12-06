@@ -27,8 +27,8 @@
             "fields": [
                 "Università degli Studi Milano Bicocca, Milano, Italia",
                 "Corso di laurea: Informatica [F1801Q]",
-                "Discipline affrontate: Ingegneria del Software, Machine Learning",
-                "Anno: 1°"
+                "Discipline affrontate: Modelli e Simulazioni, Ingegneria del Software, Metodi del Calcolo Scientifico, Machine Learning, Teoria dell'Informazione",
+                "Anno: 2°"
             ],
             "urls": {
                 "Sito": "unimib.it"
@@ -129,7 +129,7 @@
                 "Java",
                 "R",
                 "Lisp",
-                "Prolog"
+                "Julia"
             ]
         },
 

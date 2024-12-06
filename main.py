@@ -5,7 +5,8 @@ class Curler:
     @staticmethod
     def curlFile(url):
         filename = "./build/" + url.split("/")[-1]
-        os.system(f"curl -o {filename} {url}")
+        if not os.path.exists(filename):
+          os.system(f"curl -o {filename} {url}")
         return filename
 
 class Console:
