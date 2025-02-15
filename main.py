@@ -183,6 +183,27 @@ class CVEducationExperience:
             "\\ecvitem{}{\\includegraphics[width=12cm]{" + Curler.curlFile(self.attachments[attachment]).replace('_', '\\_') + "}}" for attachment in self.attachments
         ])
 
+class CVPublication:
+    def __init__(self, config):
+        self.year = config["year"]
+        self.title = config["title"]
+        self.fields = config["fields"]
+        self.urls = config["urls"]
+        self.attachments = config["attachments"]
+    
+    def compile(self):
+        return "\n".join([
+            "\\ecvtitle{" + self.year + "}{" + self.title + "}"
+        ] + [
+            "\\ecvitem{}{" + field + "}" for field in self.fields
+        ] + [
+            "\\ecvitem{}{\\href{" + self.urls[url].replace("_", "\\_") + "}{Vai a " + url + ": " + self.urls[url].replace('_', '\\_') + "}}" for url in self.urls
+        ] + [
+            "\\ecvitem{}{" + f"Allegato: {attachment}" + "}" for attachment in self.attachments
+        ] + [
+            "\\ecvitem{}{\\includegraphics[width=12cm]{" + Curler.curlFile(self.attachments[attachment]).replace('_', '\\_') + "}}" for attachment in self.attachments
+        ])
+
 class CVLanguageSkill:
     def __init__(self, config):
         self.mothertongue = config["mothertongue"]
@@ -199,7 +220,7 @@ class CVLanguageSkill:
         for lang in self.langs:
             text += "\n" + "\n".join([
                 "\\ecvlanguage{" + lang["name"] + "}{" + "}{".join(lang["levels"]) + "}",
-                "\\ecvlanguagecertificate{\href{" + lang["certificate"]["url"] + "}{" + lang["certificate"]["issuer"] + "}}"
+                "\\ecvlanguagecertificate{\\href{" + lang["certificate"]["url"] + "}{" + lang["certificate"]["issuer"] + "}}"
             ])
         
         text += "\n" + "\n".join([
@@ -213,7 +234,7 @@ class CVDigitalSkills:
         self.levels = config["levels"]
     
     def compile(self):
-          return "\\ecvdigitalcompetence{" + "}{".join([ f"\ecv{_}" for _ in self.levels]) + "}"
+          return "\\ecvdigitalcompetence{" + "}{".join([ f"\\ecv{_}" for _ in self.levels]) + "}"
 
 class CVProgrammingSkills:
     def __init__(self, config):
@@ -314,6 +335,15 @@ class CVEducation:
         text += "\n" + "\n".join([_.compile() for _ in self.experiences])
         return text
 
+class CVPublications:
+    def __init__(self, config):
+        self.experiences = [CVPublication(_) for _ in config]
+    
+    def compile(self):
+        text = "\\ecvsection{Pubblicazioni}"
+        text += "\n" + "\n".join([_.compile() for _ in self.experiences])
+        return text
+
 class CVDream:
     def __init__(self, config):
         self.text = config["text"]
@@ -321,7 +351,7 @@ class CVDream:
     def compile(self):
         return "\n".join([
             "\\ecvsection{Aspirazioni Professionali}",
-            "\ecvitem{}{" + self.text + "}"
+            "\\ecvitem{}{" + self.text + "}"
         ])
 
 class CVPrivacy:
@@ -331,7 +361,7 @@ class CVPrivacy:
     def compile(self):
         return "\n".join([
             "\\ecvsection{Privacy}",
-            "\ecvitem{}{Autorizzo il trattamento dei miei dati personali presenti nel CV ai sensi dell’art. 13 d. lgs. 30 giugno 2003 n. 196 - \"Codice in materia di protezione dei dati personali\" e dell’art. 13 GDPR 679/16 - \"Regolamento europeo sulla protezione dei dati persona\"}"
+            "\\ecvitem{}{Autorizzo il trattamento dei miei dati personali presenti nel CV ai sensi dell’art. 13 d. lgs. 30 giugno 2003 n. 196 - \"Codice in materia di protezione dei dati personali\" e dell’art. 13 GDPR 679/16 - \"Regolamento europeo sulla protezione dei dati persona\"}"
         ])
 
 class CVDocument:
@@ -344,8 +374,9 @@ class CVDocument:
         self.page = [
             CVPersonalInfo(),
             CVWork(config["work"]),
+            CVPublications(config["publications"]),
             CVEducation(config["education"]),
-            CVPageBreak(),
+            #CVPageBreak(),
             CVSkills(config["skills"]),
             CVDream(config["dream"]),
             CVPrivacy()

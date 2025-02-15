@@ -22,12 +22,12 @@
     "education": [
         {
             "start": "2023",
-            "end": "present",
+            "end": "present (2025?)",
             "title": "Corso di Laurea Magistrale",
             "fields": [
                 "Università degli Studi Milano Bicocca, Milano, Italia",
                 "Corso di laurea: Informatica [F1801Q]",
-                "Discipline affrontate: Modelli e Simulazioni, Ingegneria del Software, Metodi del Calcolo Scientifico, Machine Learning, Teoria dell'Informazione",
+                "Discipline affrontate: Modelli e Simulazioni, Ingegneria del Software (e Re-Engineering), Metodi del Calcolo Scientifico, Machine Learning, Teoria dell'Informazione, Microservizi, CI/CD, Information Retrieval",
                 "Anno: 2°"
             ],
             "urls": {
@@ -76,6 +76,21 @@
             ],
             "urls": {
                 "Sito": "www.istitutomatteifiorenzuola.edu.it"
+            },
+            "attachments": {}
+        }
+    ],
+    "publications": [
+        {
+            "year": "Aprile 2025",
+            "title": "ENASE Conference 2025",
+            "fields": [
+                "Titolo: Lessons learned from implementing a language-agnostic dependency graph parser",
+                "Parole chiave: Source Code, Software Analysis, Dependency Graphs",
+                "Categoria: Short Paper"
+            ],
+            "urls": {
+                "Sito": "https://enase.scitevents.org/"
             },
             "attachments": {}
         }
