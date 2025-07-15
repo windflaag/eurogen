@@ -22,7 +22,7 @@
     "education": [
         {
             "start": "2023",
-            "end": "present (2025?)",
+            "end": "Sep 2025",
             "title": "Corso di Laurea Magistrale",
             "fields": [
                 "Università degli Studi Milano Bicocca, Milano, Italia",
@@ -80,9 +80,34 @@
             "attachments": {}
         }
     ],
+    "deliverables": [
+        {
+            "year": "2025",
+            "title": "Unconventional reinforcement learning on traffic lights with SUMO",
+            "fields": [
+              "Tipologia: TESI",
+              "Redatto in collaborazione con il prof. Giuseppe Vizzari (UnimiB) nel contesto delle attivit\\`a del Centro Nazionale per la Mobilit\\`a Sostenibile"
+            ],
+            "urls": {
+            },
+            "attachments": {}
+        },
+        {
+            "year": "2023",
+            "title": "Un framework multi-linguaggio per l'identificazione delle dipendenze del codice sorgente",
+            "fields": [
+              "Tipologia: TESI",
+              "Redatto in collaborazione con il dott. Darius Sas (TXT Arcan s.r.l.)"
+            ],
+            "urls": {
+                "PDF": "https://frefolli.github.io/skullian-thesis/thesis.pdf"
+            },
+            "attachments": {}
+        }
+    ],
     "publications": [
         {
-            "year": "Aprile 2025",
+            "year": "4 Aprile 2025",
             "title": "ENASE Conference 2025",
             "fields": [
                 "Titolo: Lessons learned from implementing a language-agnostic dependency graph parser",
@@ -99,14 +124,12 @@
         "name": "Francesco",
         "surname": "Refolli",
         "abbrv": "R.F.",
-        "address": "Fiorenzuola d'Arda, Piacenza, IT",
-        "mobile": "+39 392 757 8861",
+        "address": "Piacenza, IT",
         "email": "francesco.refolli@gmail.com",
-        "git": "windflaag",
+        "git": "frefolli",
         "linkedin": "francesco-refolli-ba630b186",
         "gender": "Male",
-        "nationality": "Italian",
-        "birthday": "17 July 2001"
+        "nationality": "Italian"
     },
     "skills": {
         "language": {
@@ -167,6 +190,6 @@
         ]
     },
     "dream": {
-        "text": "Nel breve termine miro a terminare gli studi. Successivamente intendo perseguire una carriera professionale nell'ambito ferroviario e nei settori per me di maggior interesse, concentrandomi specificamente su tematiche come il software di sistema, i sistemi distribuiti e i linguaggi di programmazione (compilatori et al)."
+        "text": "Nel breve termine miro a terminare gli studi. Successivamente intendo perseguire una carriera professionale negli ambiti Aerospace e Ferrovie come sviluppatore e progettista software."
     }
 }

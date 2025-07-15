@@ -84,13 +84,13 @@ class CVBibliography:
         self.surname = config["surname"]
         self.abbrv = config["abbrv"]
         self.address = config["address"]
-        self.mobile = config["mobile"]
+        #self.mobile = config["mobile"]
         self.email = config["email"]
         self.git = config["git"]
         self.linkedin = config["linkedin"]
         self.gender = config["gender"]
         self.nationality = config["nationality"]
-        self.birthday = config["birthday"]
+        #self.birthday = config["birthday"]
     
     def compile(self):
         return "\n".join([
@@ -98,13 +98,13 @@ class CVBibliography:
             "\\ecvbibhighlight{" + self.surname + "}{" + self.name + "}{" + self.abbrv + "}",
             "\\ecvname{" + self.surname + " " + self.name + "}",
             "\\ecvaddress{" + self.address + "}",
-            "\\ecvmobile{" + self.mobile + "}",
+            #"\\ecvmobile{" + self.mobile + "}",
             "\\ecvemail{" + self.email + "}",
             "\\ecvgithubpage{www.github.com/" + self.git + "}",
             "\\ecvgitlabpage{www.gitlab.com/" + self.git + "}",
             "\\ecvlinkedinpage{www.linkedin.com/in/" + self.linkedin + "}",
             "\\ecvgender{" + self.gender + "}",
-            "\\ecvdateofbirth{" + self.birthday + "}",
+            #"\\ecvdateofbirth{" + self.birthday + "}",
             "\\ecvnationality{" + self.nationality + "}"
         ])
 
@@ -184,6 +184,27 @@ class CVEducationExperience:
         ])
 
 class CVPublication:
+    def __init__(self, config):
+        self.year = config["year"]
+        self.title = config["title"]
+        self.fields = config["fields"]
+        self.urls = config["urls"]
+        self.attachments = config["attachments"]
+    
+    def compile(self):
+        return "\n".join([
+            "\\ecvtitle{" + self.year + "}{" + self.title + "}"
+        ] + [
+            "\\ecvitem{}{" + field + "}" for field in self.fields
+        ] + [
+            "\\ecvitem{}{\\href{" + self.urls[url].replace("_", "\\_") + "}{Vai a " + url + ": " + self.urls[url].replace('_', '\\_') + "}}" for url in self.urls
+        ] + [
+            "\\ecvitem{}{" + f"Allegato: {attachment}" + "}" for attachment in self.attachments
+        ] + [
+            "\\ecvitem{}{\\includegraphics[width=12cm]{" + Curler.curlFile(self.attachments[attachment]).replace('_', '\\_') + "}}" for attachment in self.attachments
+        ])
+
+class CVDeliverable:
     def __init__(self, config):
         self.year = config["year"]
         self.title = config["title"]
@@ -344,6 +365,15 @@ class CVPublications:
         text += "\n" + "\n".join([_.compile() for _ in self.experiences])
         return text
 
+class CVDeliverables:
+    def __init__(self, config):
+        self.experiences = [CVDeliverable(_) for _ in config]
+    
+    def compile(self):
+        text = "\\ecvsection{Manufatti}"
+        text += "\n" + "\n".join([_.compile() for _ in self.experiences])
+        return text
+
 class CVDream:
     def __init__(self, config):
         self.text = config["text"]
@@ -375,6 +405,7 @@ class CVDocument:
             CVPersonalInfo(),
             CVWork(config["work"]),
             CVPublications(config["publications"]),
+            CVDeliverables(config["deliverables"]),
             CVEducation(config["education"]),
             #CVPageBreak(),
             CVSkills(config["skills"]),
