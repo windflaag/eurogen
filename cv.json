@@ -22,13 +22,14 @@
     "education": [
         {
             "start": "2023",
-            "end": "Sep 2025",
+            "end": "2025",
             "title": "Corso di Laurea Magistrale",
             "fields": [
                 "Università degli Studi Milano Bicocca, Milano, Italia",
                 "Corso di laurea: Informatica [F1801Q]",
                 "Discipline affrontate: Modelli e Simulazioni, Ingegneria del Software (e Re-Engineering), Metodi del Calcolo Scientifico, Machine Learning, Teoria dell'Informazione, Microservizi, CI/CD, Information Retrieval",
-                "Anno: 2°"
+                "Voto: 110 e Lode",
+                "Tesi: Unconventional reinforcement learning on traffic lights with SUMO"
             ],
             "urls": {
                 "Sito": "unimib.it"
@@ -53,6 +54,7 @@
             "attachments": {}
         },
         {
+            "minor": true,
             "start": "2021",
             "end": "2021",
             "title": "Progetto Cyberchallenge",
@@ -67,6 +69,7 @@
             }
         },
         {
+            "minor": true,
             "start": "2015",
             "end": "2020",
             "title": "Diploma di Liceo Scientifico",
@@ -89,6 +92,7 @@
               "Redatto in collaborazione con il prof. Giuseppe Vizzari (UnimiB) nel contesto delle attivit\\`a del Centro Nazionale per la Mobilit\\`a Sostenibile"
             ],
             "urls": {
+                "PDF": "https://frefolli.github.io/master-thesis/thesis.pdf"
             },
             "attachments": {}
         },
@@ -156,18 +160,26 @@
             ]
         },
 
-        "programming": {
-            "langs": [
-                "C",
-                "C++",
-                "Rust",
+        "tech": {
+            "Programming Languages": [
+                "C/C++",
                 "Python",
-                "Ruby",
+                "Rust",
                 "JS",
                 "Java",
-                "R",
-                "Lisp",
-                "Julia"
+                "Ruby",
+                "Latex",
+                "Bash"
+            ],
+            "Build Automation": [
+              "Meson",
+              "CMake",
+              "Make"
+            ],
+            "CI/CD Automation": [
+              "Docker",
+              "Kubernetes",
+              "Actions"
             ]
         },
 
@@ -190,6 +202,7 @@
         ]
     },
     "dream": {
-        "text": "Nel breve termine miro a terminare gli studi. Successivamente intendo perseguire una carriera professionale negli ambiti Aerospace e Ferrovie come sviluppatore e progettista software."
+        "minor": true,
+        "text": "Intendo perseguire una carriera professionale negli ambiti Aerospace e Ferrovie come sviluppatore e progettista software."
     }
 }
