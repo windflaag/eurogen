@@ -100,10 +100,10 @@ class CVBibliography:
       "\\ecvaddress{" + self.address + "}",
       #"\\ecvmobile{" + self.mobile + "}",
       "\\ecvemail{" + self.email + "}",
-      "\\ecvgithubpage{www.github.com/" + self.git + "}",
-      "\\ecvgitlabpage{www.gitlab.com/" + self.git + "}",
-      "\\ecvlinkedinpage{www.linkedin.com/in/" + self.linkedin + "}",
-      "\\ecvgender{" + self.gender + "}",
+      #"\\ecvgithubpage{www.github.com/" + self.git + "}",
+      #"\\ecvgitlabpage{www.gitlab.com/" + self.git + "}",
+      #"\\ecvlinkedinpage{www.linkedin.com/in/" + self.linkedin + "}",
+      #"\\ecvgender{" + self.gender + "}",
       #"\\ecvdateofbirth{" + self.birthday + "}",
       "\\ecvnationality{" + self.nationality + "}"
     ])
@@ -152,17 +152,24 @@ class CVWorkExperience:
   def compile(self, short: bool):
     if short and self.minor:
       return ""
-    return "\n".join([
+    fields = []
+    fields += [
       "\\ecvtitle{" + self.start + "--" + self.end + "}{" + self.title + "}"
-    ] + [
+    ]
+    fields += [
       "\\ecvitem{}{" + field + "}" for field in self.fields
-    ] + [
-      "\\ecvitem{}{\\href{" + self.urls[url].replace("_", "\\_") + "}{Vai a " + url + ": " + self.urls[url].replace('_', '\\_') + "}}" for url in self.urls
-    ] + [
+    ]
+    if not short:
+      fields += [
+        "\\ecvitem{}{\\href{" + self.urls[url].replace("_", "\\_") + "}{Vai a " + url + ": " + self.urls[url].replace('_', '\\_') + "}}" for url in self.urls
+      ]
+    fields += [
       "\\ecvitem{}{" + f"Allegato: {attachment}" + "}" for attachment in self.attachments
-    ] + [
+    ]
+    fields += [
       "\\ecvitem{}{\\includegraphics[width=12cm]{" + Curler.curlFile(self.attachments[attachment]).replace('_', '\\_') + "}}" for attachment in self.attachments
-    ])
+    ]
+    return "\n".join(fields)
 
 class CVEducationExperience:
   def __init__(self, config):
@@ -177,17 +184,24 @@ class CVEducationExperience:
   def compile(self, short: bool):
     if short and self.minor:
       return ""
-    return "\n".join([
+    fields = []
+    fields += [
       "\\ecvtitle{" + self.start + "--" + self.end + "}{" + self.title + "}"
-    ] + [
+    ]
+    fields += [
       "\\ecvitem{}{" + field + "}" for field in self.fields
-    ] + [
-      "\\ecvitem{}{\\href{" + self.urls[url].replace("_", "\\_") + "}{Vai a " + url + ": " + self.urls[url].replace('_', '\\_') + "}}" for url in self.urls
-    ] + [
+    ]
+    if not short:
+      fields += [
+        "\\ecvitem{}{\\href{" + self.urls[url].replace("_", "\\_") + "}{Vai a " + url + ": " + self.urls[url].replace('_', '\\_') + "}}" for url in self.urls
+      ]
+    fields += [
       "\\ecvitem{}{" + f"Allegato: {attachment}" + "}" for attachment in self.attachments
-    ] + [
+    ]
+    fields += [
       "\\ecvitem{}{\\includegraphics[width=12cm]{" + Curler.curlFile(self.attachments[attachment]).replace('_', '\\_') + "}}" for attachment in self.attachments
-    ])
+    ]
+    return "\n".join(fields)
 
 class CVPublication:
   def __init__(self, config):
@@ -201,17 +215,24 @@ class CVPublication:
   def compile(self, short: bool):
     if short and self.minor:
       return ""
-    return "\n".join([
+    fields = []
+    fields += [
       "\\ecvtitle{" + self.year + "}{" + self.title + "}"
-    ] + [
+    ]
+    fields += [
       "\\ecvitem{}{" + field + "}" for field in self.fields
-    ] + [
-      "\\ecvitem{}{\\href{" + self.urls[url].replace("_", "\\_") + "}{Vai a " + url + ": " + self.urls[url].replace('_', '\\_') + "}}" for url in self.urls
-    ] + [
+    ]
+    if not short:
+      fields += [
+        "\\ecvitem{}{\\href{" + self.urls[url].replace("_", "\\_") + "}{Vai a " + url + ": " + self.urls[url].replace('_', '\\_') + "}}" for url in self.urls
+      ]
+    fields += [
       "\\ecvitem{}{" + f"Allegato: {attachment}" + "}" for attachment in self.attachments
-    ] + [
+    ]
+    fields += [
       "\\ecvitem{}{\\includegraphics[width=12cm]{" + Curler.curlFile(self.attachments[attachment]).replace('_', '\\_') + "}}" for attachment in self.attachments
-    ])
+    ]
+    return "\n".join(fields)
 
 class CVDeliverable:
   def __init__(self, config):
@@ -225,17 +246,24 @@ class CVDeliverable:
   def compile(self, short: bool):
     if short and self.minor:
       return ""
-    return "\n".join([
+    fields = []
+    fields += [
       "\\ecvtitle{" + self.year + "}{" + self.title + "}"
-    ] + [
+    ]
+    fields += [
       "\\ecvitem{}{" + field + "}" for field in self.fields
-    ] + [
-      "\\ecvitem{}{\\href{" + self.urls[url].replace("_", "\\_") + "}{Vai a " + url + ": " + self.urls[url].replace('_', '\\_') + "}}" for url in self.urls
-    ] + [
+    ]
+    if not short:
+      fields += [
+        "\\ecvitem{}{\\href{" + self.urls[url].replace("_", "\\_") + "}{Vai a " + url + ": " + self.urls[url].replace('_', '\\_') + "}}" for url in self.urls
+      ]
+    fields += [
       "\\ecvitem{}{" + f"Allegato: {attachment}" + "}" for attachment in self.attachments
-    ] + [
+    ]
+    fields += [
       "\\ecvitem{}{\\includegraphics[width=12cm]{" + Curler.curlFile(self.attachments[attachment]).replace('_', '\\_') + "}}" for attachment in self.attachments
-    ])
+    ]
+    return "\n".join(fields)
 
 class CVLanguageSkill:
   def __init__(self, config):

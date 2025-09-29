@@ -88,8 +88,7 @@
             "year": "2025",
             "title": "Unconventional reinforcement learning on traffic lights with SUMO",
             "fields": [
-              "Tipologia: TESI",
-              "Redatto in collaborazione con il prof. Giuseppe Vizzari (UnimiB) nel contesto delle attivit\\`a del Centro Nazionale per la Mobilit\\`a Sostenibile"
+              "Tesi redatta in collaborazione con il prof. Giuseppe Vizzari (UnimiB) nel contesto delle attivit\\`a del Centro Nazionale per la Mobilit\\`a Sostenibile"
             ],
             "urls": {
                 "PDF": "https://frefolli.github.io/master-thesis/thesis.pdf"
@@ -100,8 +99,7 @@
             "year": "2023",
             "title": "Un framework multi-linguaggio per l'identificazione delle dipendenze del codice sorgente",
             "fields": [
-              "Tipologia: TESI",
-              "Redatto in collaborazione con il dott. Darius Sas (TXT Arcan s.r.l.)"
+              "Tesi redatta in collaborazione con il dott. Darius Sas (TXT Arcan s.r.l.)"
             ],
             "urls": {
                 "PDF": "https://frefolli.github.io/skullian-thesis/thesis.pdf"
@@ -115,8 +113,7 @@
             "title": "ENASE Conference 2025",
             "fields": [
                 "Titolo: Lessons learned from implementing a language-agnostic dependency graph parser",
-                "Parole chiave: Source Code, Software Analysis, Dependency Graphs",
-                "Categoria: Short Paper"
+                "Parole chiave: Source Code, Software Analysis, Dependency Graphs"
             ],
             "urls": {
                 "Sito": "https://enase.scitevents.org/"
