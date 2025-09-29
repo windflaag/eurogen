@@ -10,11 +10,23 @@
             "title": "Tecnico Analista Programmatore",
             "fields": [
                 "Binary System SRL, Piacenza, Italia",
-                "Rifacimento di interfacce web, di sync per importazione dati e del sistema di calcolo delle scadenze.",
-                "Tecnologie: Ruby on Rails, VueJS, Python"
+                "Mi sono occupato di sviluppo e manutenzione di MainTrack, software per la gestione della manutenzione dei veicoli ferroviari, contribuendo all'evoluzione dell'applicativo tramite la riscrittura di alcuni componenti chiave.",
+                "Ho acquisito conoscenza di dominio del settore ferroviario e ho maturato esperienza con \\textbf{Ruby on Rails}, \\textbf{VueJS}, \\textbf{Postgres} e \\textbf{Python}."
             ],
             "urls": {
                 "Sito": "www.binarysystem.eu"
+            },
+            "attachments": {}
+        },
+        {
+            "start": "Mar 2025",
+            "end": "Feb 2026",
+            "title": "Supervisione di tesista triennale",
+            "fields": [
+                "Università degli Studi Milano Bicocca, Milano, Italia",
+                "Sto supervisionando lo sviluppo di un software per l'analisi di codice sorgente e la relativa stesura di tesi."
+            ],
+            "urls": {
             },
             "attachments": {}
         }
@@ -182,6 +194,7 @@
 
         "patents": [
             {
+                "minor": true,
                 "title": "Patente tipo B",
                 "start": "21/01/2020",
                 "end": "17/07/2030",
@@ -191,12 +204,16 @@
 
         "certificates": [
             {
+                "minor": true,
                 "title": "MOS -- Microsoft Excel 2010",
                 "name": "Exam 77--882 MOS",
                 "number": "34624028",
                 "score": "875"
             }
         ]
+    },
+    "passions": {
+        "text": "Sono un appassionato di trasportistica, simulazioni, sistemi multi agente, compilatori e linguaggi di programmazione. Sia durante lo svolgimento delle tesi che nel tempo libero ho avuto modo di approfondire questi temi sviluppando un compilatore per un linguaggio simil C, un simulatore ferroviario, algoritmi per analisi e instradamento con reti di trasporto pubblico in formato GTFS ..."
     },
     "dream": {
         "minor": true,

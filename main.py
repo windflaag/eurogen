@@ -322,8 +322,11 @@ class CVPatentSkills:
     self.issuer = config["issuer"]
     self.start = config["start"]
     self.end = config["end"]
+    self.minor = (config.get("minor") or False)
   
   def compile(self, short: bool):
+    if short and self.minor:
+      return ""
     text = ""
 
     text += "\\ecvblueitem{" + self.title + "}{"
@@ -418,6 +421,19 @@ class CVDeliverables:
     text += "\n" + "\n".join([_.compile(short) for _ in self.experiences])
     return text
 
+class CVPassions:
+  def __init__(self, config):
+    self.text = config["text"]
+    self.minor = (config.get("minor") or False)
+
+  def compile(self, short: bool):
+    if short and self.minor:
+      return ""
+    return "\n".join([
+      "\\ecvsection{Passioni}",
+      "\\ecvitem{}{" + self.text + "}"
+    ])
+
 class CVDream:
   def __init__(self, config):
     self.text = config["text"]
@@ -466,6 +482,7 @@ class CVDocument:
       CVEducation(config["education"]),
       #CVPageBreak(),
       CVSkills(config["skills"]),
+      CVPassions(config["passions"]),
       CVDream(config["dream"]),
       CVPrivacy(),
       CVCopyright()
