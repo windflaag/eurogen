@@ -80,6 +80,7 @@ class Interface:
 
 class CVBibliography:
   def __init__(self, config):
+    self.title = config["title"]
     self.name = config["name"]
     self.surname = config["surname"]
     self.abbrv = config["abbrv"]
@@ -96,7 +97,7 @@ class CVBibliography:
     return "\n".join([
       "\\bibliography{europasscv_example}",
       "\\ecvbibhighlight{" + self.surname + "}{" + self.name + "}{" + self.abbrv + "}",
-      "\\ecvname{" + self.surname + " " + self.name + "}",
+      "\\ecvname{" + "\\textbf{" + self.title + "} " + self.surname + " " + self.name + "}",
       "\\ecvaddress{" + self.address + "}",
       #"\\ecvmobile{" + self.mobile + "}",
       "\\ecvemail{" + self.email + "}",

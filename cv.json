@@ -24,7 +24,31 @@
             "title": "Supervisione di tesista triennale",
             "fields": [
                 "Università degli Studi Milano Bicocca, Milano, Italia",
-                "Sto supervisionando lo sviluppo di un software per l'analisi di codice sorgente e la relativa stesura di tesi."
+                "Supervisione dello sviluppo di un framework language-independent per l'analisi di codice sorgente e la relativa stesura di tesi."
+            ],
+            "urls": {
+            },
+            "attachments": {}
+        },
+        {
+            "start": "Mar 2026",
+            "end": "N/A",
+            "title": "Supervisione di tesista magistrale",
+            "fields": [
+                "Università degli Studi Milano Bicocca, Milano, Italia",
+                "Supervisione di formalizzazione e sviluppo di un framework language-independent per l'analisi di codice sorgente e la relativa stesura di tesi."
+            ],
+            "urls": {
+            },
+            "attachments": {}
+        },
+        {
+            "start": "Mar 2026",
+            "end": "Jun 2026",
+            "title": "Tutor nel Corso \"Laboratorio di Informatica\" afferente al CdL in Fisica",
+            "fields": [
+                "Università degli Studi Milano Bicocca, Milano, Italia",
+                "Laboratorio di programmazione in Linguaggio C"
             ],
             "urls": {
             },
@@ -32,6 +56,21 @@
         }
     ],
     "education": [
+        {
+            "start": "2025",
+            "end": "prev. 2028",
+            "title": "Corso di Dottorato",
+            "fields": [
+                "Università degli Studi Milano Bicocca, Milano, Italia",
+                "Corso di dottorato: Informatica",
+                "Discipline affrontate: Metodi di Ottimizzazione, Algoritmi Efficienti, Machine Learning, Analisi Statica",
+                "Ambiti di Ricerca: \\textbf{Esecuzione Simbolica, Transpilatori}, Analisi Language-Agnostic, Trasportistica, Sistemi Multi Agente"
+            ],
+            "urls": {
+                "Sito": "unimib.it"
+            },
+            "attachments": {}
+        },
         {
             "start": "2023",
             "end": "2025",
@@ -131,9 +170,22 @@
                 "Sito": "https://enase.scitevents.org/"
             },
             "attachments": {}
+        },
+        {
+            "year": "25 Giugno 2026",
+            "title": "ICSAConference 2026",
+            "fields": [
+                "Titolo: Impact of Refactoring Architectural Smells on Quality, Security, and Performance Metrics",
+                "Parole chiave: Architectural Smells Refactoring, Security, Performance, Open-source Software, Technical Debt"
+            ],
+            "urls": {
+                "Sito": "https://icsa-conferences.org/"
+            },
+            "attachments": {}
         }
     ],
     "bibliography": {
+        "title": "MSc",
         "name": "Francesco",
         "surname": "Refolli",
         "abbrv": "R.F.",
@@ -217,6 +269,6 @@
     },
     "dream": {
         "minor": true,
-        "text": "Intendo perseguire una carriera professionale negli ambiti Aerospace e Ferrovie come sviluppatore e progettista software."
+        "text": "Make Software Engineering Great Again"
     }
 }
